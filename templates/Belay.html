@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Create Chat</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Belay.css') }}"></script>
+    </head>
+
+    <body>
+        <div id="login_display" >
+            <label>email: </label>
+            <input id="login_email"></input>
+            <br></br>
+            <label>password: </label>
+            <input id="login_password"></input>
+            <br></br>
+
+            <button onclick="login();">login</button>
+            <button onclick="register_display();">register</button>
+            <button onclick="forget_password();">forgot password?</button>
+            <div id="login_error"> </div>
+                
+        </div>
+
+
+        <div id="register_display" >
+            <label>username: </label>
+            <input id="register_username"></input>
+            <br></br>
+            <label>password: </label>
+            <input id="register_password"></input>
+            <br></br>
+            
+            <label>email address: </label>
+            <input id="register_email"></input>
+            <br></br>
+            <button onclick="register();">register</button>
+
+
+            <button onclick="login_display();">login</button>
+
+            <div id="register_error"> </div>
+        </div>
+
+
+        <div style="column-count:2" id="belay_display">
+            <div style="height:100vh;overflow-y:scroll;background-color: #dddddd" id="left">
+                <label id="username_display"> </label>
+                <br></br>
+                <label> channels </label>
+                <br></br>
+                <input id="create_channel"></input>
+                <button onclick="create_channel();">create channel</button>
+
+                <div id="channels">
+                </div>
+
+             </div>
+
+            
+            <div id="mid" style="display:none">
+            <div style="height:100vh;overflow-y:scroll">
+                <div id="messages">
+                </div>
+            </div>
+            <input id="message_content"></id>
+            <button onclick="send_message();">send</button>
+            </div>
+            
+            
+            
+            <div id="right" style="display:none"> 
+            <div style="height:100vh;overflow-y:scroll;background-color: #F0FFFF">
+                <div id=replies>
+                </div>
+            </div>
+            <input id="reply_content"></id>
+            <button onclick="send_reply();">send</button>
+            <button onclick="thread_hide();">close thread</button>
+            </div> 
+       </div>
+
+    </body>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='Belay.js') }}"></script>
+
+
+</html>
+
+
+
+
