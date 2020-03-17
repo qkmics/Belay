@@ -15,7 +15,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT']=0
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 app.config['MYSQL_DATABASE_USER'] = 'user'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'webHW@123'
-app.config['MYSQL_DATABASE_DB'] = 'webhw'
+app.config['MYSQL_DATABASE_DB'] = 'qiank'
 
 
 mysql = MySQL()

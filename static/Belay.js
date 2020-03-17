@@ -221,7 +221,7 @@ function get_replies_in_message() {
         var username = reply[0];
         var content = reply[1];
         
-        var substr = '<label>' + username  + '</label>' + '<div>' + content + '</div>';
+        var substr = '<label>' + username  + ':</label>' + '<div>' + content + '</div>';
         substr = substr + '<br></br>';
         str = str + substr;
     });
@@ -294,7 +294,7 @@ function belay_display() {
     // history.pushState({},"","/chat/"+chat_id);
     
     document.getElementById("username_display").innerHTML = window.username;
-    setInterval(request_data,5000);
+    setInterval(request_data,500);
     request_data();
 }
 
